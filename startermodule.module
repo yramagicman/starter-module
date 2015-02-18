@@ -1,0 +1,36 @@
+<?php
+/**
+ * @file
+ * Startermodule file.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function startermodule_menu() {
+  $items['startermodule_menu'] = array(
+    'title' => '',
+    'page callback' => '',
+    'page arguments' => array(),
+    'access arguments' => array(''),
+    'type' => ,
+    'file' => ,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_form().
+ */
+function startermodule_form($node, &$form_state) {
+  $type = node_type_get_type($node);
+
+  $form['startermodule_form'] = array(
+    '#type' => '',
+    '#title' => t(''),
+    '#default_value' => ,
+  );
+
+  return $form;
+}

@@ -1,0 +1,4 @@
+name = starter_module
+package = starter_package
+core = 7.x
+description = description

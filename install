@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+$module_name = $@
+sed -i "s/startermodule/$@" ./*
+mv startermodule.info "$@.info"
+mv startermodule.module "$@.module"
