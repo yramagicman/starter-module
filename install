@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
-sed -i "s/startermodule/$@" ./*
+sed -i "s/startermodule*/$@" ./*
+sed -i "s/starter_module/$@" ./*
+sed -i "s/starter_package/$@" ./*
 mv startermodule.info "$@.info"
 mv startermodule.module "$@.module"
 rm -i ./install
