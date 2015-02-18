@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-sed -i "s/startermodule*/$@/g" ./*
-sed -i "s/starter_module/$@/g" ./*
-sed -i "s/starter_package/$@/g" ./*
+find ./ -type f -exec sed -i -e "s/startermodule/$@/g" {} \;
+find ./ -type f -exec sed -i -e "s/starter_module/$@/g" {} \;
+find ./ -type f -exec sed -i -e "s/starter_package/$@/g" {} \;
 mv startermodule.info "$@.info"
 mv startermodule.module "$@.module"
 rm -i ./install
