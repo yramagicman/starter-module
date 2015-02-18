@@ -1,8 +1,11 @@
 #!/usr/bin/env sh
 rm -irfv ./.git
 find ./ -type f -exec sed -i '' "s/startermodule/$@/g" {} \;
+find ./ -type f -exec sed -i '' "s/Startermodule/$@/g" {} \;
 find ./ -type f -exec sed -i '' "s/starter_module/$@/g" {} \;
 find ./ -type f -exec sed -i '' "s/starter_package/$@/g" {} \;
 mv startermodule.info "$@.info"
 mv startermodule.module "$@.module"
 rm -i ./install
+git init
+git add ./*
