@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
-find ./ -type f -exec sed -i "s/startermodule/$@/g" {} \;
-find ./ -type f -exec sed -i "s/starter_module/$@/g" {} \;
-find ./ -type f -exec sed -i "s/starter_package/$@/g" {} \;
+rm -irfv ./.git
+find ./ -type f -exec sed -i '' "s/startermodule/$@/g" {} \;
+find ./ -type f -exec sed -i '' "s/starter_module/$@/g" {} \;
+find ./ -type f -exec sed -i '' "s/starter_package/$@/g" {} \;
 mv startermodule.info "$@.info"
 mv startermodule.module "$@.module"
 rm -i ./install
